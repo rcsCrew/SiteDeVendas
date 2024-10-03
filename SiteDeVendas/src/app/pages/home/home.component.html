@@ -1,0 +1,21 @@
+<!-- Itera sobre a lista de produtos (items) -->
+ <div class="container">
+  <div class="row center">
+    <div class="col-md-4" *ngFor="let item of items">
+      <div class="card-body">
+        <div class="card">
+          <div class="card-img-top"></div>
+        </div>
+        <div class="card-title"><!-- Título -->
+          <h1>{{ item.nome }}</h1></div>
+        <div class="card-valor"><!-- Valor -->
+          <p><strong>Preço:</strong> {{ item.preco | currency:'BRL' }}</p>
+        </div>
+        <div class="card-desc"><!-- Descrição -->
+          <p><strong>Descrição:</strong> {{ item.descricao }}</p></div>
+        <a href="/produtos/{{item.id}}" class="btn btn-primary">ver produto</a>
+      </div>
+    </div>
+  </div>
+ </div>
+

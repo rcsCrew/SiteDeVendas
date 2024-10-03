@@ -1,0 +1,10 @@
+<div *ngIf="item">
+  <h1>{{ item.nome }}</h1>
+  <p><strong>Descrição:</strong> {{ item.descricao }}</p>
+  <p><strong>Preço:</strong> {{ item.preco | currency:'BRL' }}</p>
+  <p><strong>Quantidade:</strong> {{ item.quantidade }}</p>
+  <p><strong>Promoção:</strong> {{ item.promocao ? 'Sim' : 'Não' }}</p>
+</div>
+<div *ngIf="!item">
+  <p>Carregando produto...</p>
+</div>
