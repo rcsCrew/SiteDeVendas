@@ -1,0 +1,45 @@
+.area1{
+  width: 200px;
+  height: 100vh;
+  float: left;
+}
+.area1 .img-p{
+  display: flex;
+  margin-left: 180%;
+  margin-top: 15vh;
+  border-radius: 15px;
+}
+.area1 .flex-img{
+  display: flex;
+  margin-left: 180%;
+  margin-top: 1vh;
+  gap: 1vh;
+}
+.area1 .img-s{
+  display: flex;
+
+  width: 175px;
+  border-radius: 15px;
+}
+
+.area1 .flex{
+  display: flex;
+}
+
+
+.area2{
+  width: 100%;
+  height: 100vh;
+  color: white;
+
+}
+.area2 .box{
+  width: 880px;
+  height: 400px;
+  background: rgb(35, 35, 35);
+  float: right;
+  margin-right: 10%;
+  margin-top: 15vh;
+  border-radius: 15px;
+  padding: 20px;
+}

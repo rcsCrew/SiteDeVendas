@@ -1,1 +1,91 @@
+<header>
+  <nav class="navigation">
+    <h1>LOJA</h1>
+      <a href="#">Home</a>
+      <a href="#">Categorias</a>
+      <a href="#">Produtos</a>
+      <a href="#">Carrinho</a>
+      <button class="btnLogin">Login</button>
+  </nav>
+</header>
+
+<div class="flex">
+
+  <div class="wrapper">
+    <span class="icon-close">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="x"></mat-icon><!-- Substituído ion-icon por mat-icon -->
+    </span>
+
+  <div class="form-box login">
+      <h2>Login</h2>
+
+      <form action="#">
+        <div class="input-box">
+          <span class="icon">
+            <mat-icon></mat-icon> <!-- Exemplo de uso de ícone -->
+          </span>
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon">
+            <mat-icon></mat-icon> <!-- Substituído ion-icon por mat-icon -->
+          </span>
+          <input type="password" required>
+              <label>Senha</label>
+          </div>
+
+          <div class="remember-forgot">
+            <label><input type="checkbox">Lembrar de mim</label>
+            <a href="#">Esqueci a senha</a>
+          </div>
+
+          <button type="submit" class="btn">Entrar</button>
+          <div class="login-register">
+            <p>Nao tem uma conta? <a href="#" class="register-link">Cadastrar agora!</a></p>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-box register">
+      <h2>Cadastrar</h2>
+
+      <form action="#">
+          <div class="input-box">
+            <span class="icon">
+                  <mat-icon>person</mat-icon> <!-- Substituído ion-icon por mat-icon -->
+                </span>
+                <input type="text" required>
+                <label>Nome</label>
+              </div>
+
+              <div class="input-box">
+                <span class="icon">
+                  <mat-icon>mail</mat-icon> <!-- Substituído ion-icon por mat-icon -->
+                </span>
+                <input type="email" required>
+              <label>Email</label>
+          </div>
+
+          <div class="input-box">
+              <span class="icon">
+                <mat-icon>lock</mat-icon> <!-- Substituído ion-icon por mat-icon -->
+              </span>
+              <input type="password" required>
+              <label>Senha</label>
+            </div>
+
+            <div class="remember-forgot">
+              <label><input type="checkbox">Aceitar termos e condições</label>
+            </div>
+
+            <button type="submit" class="btn">Cadastrar</button>
+            <div class="login-register">
+              <p>Já tem uma conta? <a href="#" class="login-link">Entrar</a></p>
+          </div>
+        </form>
+  </div>
+</div>
+
 <router-outlet></router-outlet>
