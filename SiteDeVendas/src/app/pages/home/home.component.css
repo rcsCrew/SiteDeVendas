@@ -2,7 +2,7 @@
 
 
 .container {
-  margin-top: 105vh;
+  margin-top: 10vh;
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -17,7 +17,7 @@
 
 .container .row .box {
   width: 400px; /* Aumenta a largura da box */
-  height: 700px; /* Aumenta a altura da box */
+  height: 900px; /* Aumenta a altura da box */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -25,11 +25,16 @@
 }
 
 .container .row .box .box-item {
-  background: rgb(14, 14, 14);
+  background: rgb(255, 255, 255);
   border-radius: 15px;
-  color: white;
+  color: black;
+  text-align: center;
   width: 100%; /* Ajusta a largura da box-item para ocupar toda a box */
   height: 70%; /* Ajusta a altura da box-item para ocupar toda a box */
+}
+.valor{
+  background: #EEEEEE;
+  margin: 7px 15px;
 }
 
 .container .row .box .box-item p {
@@ -49,17 +54,23 @@ img {
   border-radius: 15px 15px 0 0; /* Mantém as bordas arredondadas no topo */
 }
 
+.promocao{
+  position: absolute;
+  margin-left: 15px;
+  font-size: 2px;
+}
 .btn {
-  margin-top: 20px;
-  display: block; /* Ajusta o display para block */
-  width: 60%; /* Ajusta a largura para 60% */
+  display: block;
+  position: absolute;
+  width: 19%; /* Ajusta para 80% da largura do box */
+  margin: 80px 15px;
   text-align: center;
-  background-color: #007bff; /* Cor de fundo do botão */
+  background: black;
   padding: 10px;
   border-radius: 5px;
   color: white;
   cursor: pointer;
   text-decoration: none;
-  margin-left: 20%;
+
 }
 

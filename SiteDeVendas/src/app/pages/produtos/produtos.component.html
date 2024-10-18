@@ -1,25 +1,95 @@
-<div class="area1">
-  <img class="img-p" [src]="item.image" alt="">
-  <div class="flex-img">
+<div class="container-produto">
+  <div class="area1">
+    <!-- Imagem principal do produto -->
+    <img class="img-p" [src]="item?.currentImage" alt="Imagem do produto" />
 
-    <img class="img-s" [src]="item.image" alt="">
-    <img class="img-s" [src]="item.image" alt="">
+    <div class="flex-img">
+      <!-- Iterando sobre as imagens do item -->
+      <img
+        *ngFor="let img of item?.images"
+        class="img-s"
+        [src]="img"
+        alt="Imagem do produto"
+        (click)="item.currentImage = img"
+      />
+    </div>
   </div>
 
-</div>
-<div class="area2">
-  <div class="box">
+  <div class="area2">
+    <div class="box">
+      <!-- Informação do item -->
+      <div class="info" *ngIf="item">
+        <h1>{{ item.nome }}</h1>
 
-    <div class="info" *ngIf="item">
-      <h1>{{ item.nome }}</h1>
-      <p><strong>Descrição:</strong> {{ item.descricao }}</p>
-      <p><strong>Preço:</strong> {{ item.preco | currency:'BRL' }}</p>
-      <p><strong>Quantidade:</strong> {{ item.quantidade }}</p>
-      <p><strong>Promoção:</strong> {{ item.promocao ? 'Sim' : 'Não' }}</p>
-    </div>
-    <div *ngIf="!item">
-      <p>Carregando produto...</p>
-    </div>
+        <div class="codigo">
+          <h2>Ref: {{ item.id }}</h2>
+          <h2>Marca: {{ item.marca }}</h2>
+        </div>
 
+        <div class="line">
+          <p>Quantidade:</p>
+          <p class="item">{{ item.quantidade }}</p>
+          <p *ngIf="item.promocao">Promoção: {{ item.promocao ? 'Sim' : 'Não' }}</p>
+        </div>
+
+        <div class="line">
+          <p>Disponibilidade:</p>
+          <p class="item">{{ item.disponibilidade }}</p>
+        </div>
+
+        <div class="tamanhos">
+          <p>Escolha Tamanho ({{ item.tamanhoSelecionado || 'Selecione' }})</p>
+          <div class="tamanho-opcoes">
+            <button
+              *ngFor="let tamanho of item.tamanhosDisponiveis"
+              (click)="selecionarTamanho(tamanho)"
+              class="btn-tamanho"
+            >
+              {{ tamanho }}
+            </button>
+          </div>
+        </div>
+
+        <div class="cores">
+          <p>Cores disponíveis ({{ item.corSelecionada || 'Selecione' }})</p>
+          <div class="cor-opcoes">
+            <button
+              *ngFor="let cor of item.coresDisponiveis"
+              (click)="selecionarCor(cor)"
+              class="btn-cor"
+            >
+              {{ cor }}
+            </button>
+          </div>
+        </div>
+
+
+        <!-- Exibe quando o item estiver em promoção -->
+        <p class="valor-f" *ngIf="item.promocao">
+          <span class="original-price">De R$ {{ item.precoOriginal | number: '1.2-2' }}</span>
+          <span class="preco">Por R$ {{ item.preco | number: '1.2-2' }}</span>
+        </p>
+
+        <!-- Exibe o preço normal quando não estiver em promoção -->
+        <p style="font-size: 1.3rem" class="preco" *ngIf="!item.promocao">R$ {{ item.preco | number: '1.2-2' }}</p>
+
+        <p class="parcelamento">
+          Ou 6x de: R$ {{ item.preco / 6 | number: '1.2-2' }} <span>Sem juros</span>
+        </p>
+
+        <!-- Botão de comprar -->
+        <div class="comprar">
+          <input class="quantidade" type="number" min="1" [(ngModel)]="quantidadeSelecionada" value="1" />
+          <button class="btn btn-primary">COMPRAR</button>
+        </div>
+
+        <p class="seguro">* Aqui sua compra é 100% segura, compre com tranquilidade.</p>
+      </div>
+
+      <!-- Caso o item não esteja carregado -->
+      <div *ngIf="!item">
+        <p>Carregando produto...</p>
+      </div>
+    </div>
   </div>
 </div>

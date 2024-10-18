@@ -9,20 +9,22 @@ import { ProdutosComponent } from './pages/produtos/produtos.component';
 import { LoginComponent } from './pages/login/login.component';
 import {MatIconModule} from '@angular/material/icon';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { FormGroup, FormsModule } from '@angular/forms';
+import { RegistrarComponent } from './pages/registrar/registrar.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProdutosComponent,
     LoginComponent,
+    RegistrarComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
-
-
+    FormsModule,
   ],
 
   providers: [

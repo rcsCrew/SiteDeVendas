@@ -1,1 +1,20 @@
-<p>login works!</p>
+<div class="container">
+  <h1>Login</h1>
+  <form (ngSubmit)="onLogin()">
+    <div class="input-group">
+      <label for="username">Usuário</label>
+      <input type="text" id="username" [(ngModel)]="username" name="username" required>
+    </div>
+    <div class="input-group">
+      <label for="password">Senha</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" required>
+    </div>
+    <a href="#" class="forgot-password">Esqueceu a senha?</a>
+    <button type="submit" class="btn">Logar</button>
+    <div class="social-login">
+      <button type="button" class="btn gmail" (click)="loginWithGmail()">Logar com Gmail</button>
+      <button type="button" class="btn discord" (click)="loginWithDiscord()">Logar com Discord</button>
+    </div>
+    <a href="registrar" class="registrar">Ainda nao tem conta?</a>
+  </form>
+</div>
