@@ -47,6 +47,7 @@
   background: #eeeeee;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -83,100 +84,101 @@
   font-weight: 500;
 }
 .area2 .box .info .parcelamento{
-  margin-top: -10px;
+  margin-bottom: 8px;
   font-size: 0.8rem;
   color: black;
 }
 .area2 .box .info .seguro{
   font-size: 0.8rem;
   color: black;
-}/* Estilo para o campo de quantidade */
+}
+/* Estilo para o campo de quantidade */
 .area2 .box .info .comprar{
   display: flex;
 }
 .area2 .box .info .comprar input {
-  background: #eeeeee; /* Cor de fundo */
-  width: 60px; /* Largura do campo */
-  padding: 7px 0; /* Padding superior e inferior */
- /* Margem superior */
-  font-size: 2rem; /* Tamanho da fonte */
-  text-align: center; /* Alinhamento do texto */
-  border: 1px solid #ccc; /* Borda leve */
-  border-radius: 5px; /* Cantos arredondados */
+  background: #eeeeee;
+  width: 60px;
+  padding: 7px 0;
+
+  font-size: 2rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 /* Estilo para o botão COMPRAR */
 .area2 .box .info .btn {
-  padding: 0px 100px; /* Tamanho do padding */
-  background: black; /* Cor de fundo */
-  color: white; /* Cor do texto */
-  font-size: 1rem; /* Tamanho da fonte */
-  font-weight: 700; /* Peso da fonte */
-  letter-spacing: 1.5px; /* Espaçamento entre letras */
-  border: none; /* Remove bordas padrão */
-  border-radius: 5px; /* Cantos arredondados */
-  cursor: pointer; /* Muda o cursor ao passar o mouse */
-  margin-left: 10px; /* Espaço entre o input e o botão */
+  padding: 0px 100px;
+  background: black;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
-/* Efeito ao passar o mouse no botão */
+
 .area2 .box .info .btn:hover {
-  background: #333; /* Cor de fundo ao passar o mouse */
+  background: #333;
 }
 .area2 .box .info .tamanho-opcoes {
-  display: flex;                  /* Usando flexbox para alinhar os botões */
-  gap: 10px;                     /* Espaço entre os botões */
-  margin-top: 10px;              /* Margem superior */
-  margin-bottom: 10px;           /* Margem inferior */
-  flex-wrap: wrap;               /* Permite que os botões se movam para a linha seguinte se não houver espaço */
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
 .area2 .box .info .tamanho-opcoes .btn-tamanho {
-  background-color: #ffffff;     /* Cor de fundo do botão */
-  color: rgb(0, 0, 0);           /* Cor do texto */
-  border: solid 1px;                   /* Sem borda */
-  border-radius: 5px;            /* Bordas arredondadas */
-  padding: 10px 15px;            /* Espaçamento interno */
-  font-size: 1rem;               /* Tamanho da fonte */
-  cursor: pointer;                /* Cursor em forma de mão ao passar sobre o botão */
-  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: solid 1px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .area2 .box .info .tamanho-opcoes .btn-tamanho:hover {
-  background-color: #000000;      /* Cor do botão ao passar o mouse */
+  background-color: #000000;
   color: white;
 }
 
 .area2 .box .info .tamanho-opcoes .btn-tamanho:focus {
-  outline: none;                  /* Remove o contorno padrão do foco */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao botão em foco */
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .area2 .box .info .cor-opcoes {
-  display: flex;                  /* Usando flexbox para alinhar os botões */
-  gap: 10px;                     /* Espaço entre os botões */
-  margin-top: 10px;              /* Margem superior */
-  margin-bottom: 10px;           /* Margem inferior */
-  flex-wrap: wrap;               /* Permite que os botões se movam para a linha seguinte se não houver espaço */
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
 .area2 .box .info .cor-opcoes .btn-cor {
-  background-color: #ffffff;     /* Cor de fundo do botão */
-  color: rgb(0, 0, 0);           /* Cor do texto */
-  border: solid 1px;             /* Borda sólida */
-  border-radius: 5px;            /* Bordas arredondadas */
-  padding: 10px 15px;            /* Espaçamento interno */
-  font-size: 1rem;               /* Tamanho da fonte */
-  cursor: pointer;                /* Cursor em forma de mão ao passar sobre o botão */
-  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: solid 1px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .area2 .box .info .cor-opcoes .btn-cor:hover {
-  background-color: #000000;      /* Cor do botão ao passar o mouse */
-  color: white;                   /* Cor do texto ao passar o mouse */
+  background-color: #000000;
+  color: white;
 }
 
 .area2 .box .info .cor-opcoes .btn-cor:focus {
-  outline: none;                  /* Remove o contorno padrão do foco */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao botão em foco */
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }

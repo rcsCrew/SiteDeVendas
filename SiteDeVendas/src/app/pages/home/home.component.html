@@ -11,7 +11,8 @@
         <!-- Exibe a mensagem de promoção se for verdadeira -->
         <p class="promocao" *ngIf="item.promocao">Promoção de 20%</p>
 
-        <a href="/produtos/{{item.id}}" class="btn btn-primary">ver item</a>
+        <a [routerLink]="['/produtos', item.id]" class="btn btn-primary">ver item</a>
+
       </div>
     </div>
   </div>
