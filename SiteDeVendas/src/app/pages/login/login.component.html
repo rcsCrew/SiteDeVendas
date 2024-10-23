@@ -1,20 +1,30 @@
 <div class="container">
   <h1>Login</h1>
-  <form (ngSubmit)="onLogin()">
-    <div class="input-group">
-      <label for="username">Usuário</label>
-      <input type="text" id="username" [(ngModel)]="username" name="username" required>
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+
+    <div class="flex-info">
+      <label class="label-p" for="username">Usuário</label>
+      <input type="text" id="username" required [(ngModel)]="loginData.username" name="username" #username="ngModel">
     </div>
-    <div class="input-group">
+
+    <div class="flex-info">
       <label for="password">Senha</label>
-      <input type="password" id="password" [(ngModel)]="password" name="password" required>
+      <input type="password" id="password" required [(ngModel)]="loginData.password" name="password" #password="ngModel">
     </div>
+
+    <!-- Link para esquecer a senha -->
     <a href="#" class="forgot-password">Esqueceu a senha?</a>
-    <button type="submit" class="btn">Logar</button>
+
+    <!-- Botão de login -->
+    <button type="submit" [disabled]="!loginForm.valid" class="btn">Logar</button>
+
+    <!-- Login com redes sociais -->
     <div class="social-login">
       <button type="button" class="btn gmail" (click)="loginWithGmail()">Logar com Gmail</button>
       <button type="button" class="btn discord" (click)="loginWithDiscord()">Logar com Discord</button>
     </div>
-    <a href="registrar" class="registrar">Ainda nao tem conta?</a>
+
+    <!-- Link para registrar -->
+    <a href="registrar" class="registrar">Ainda não tem conta?</a>
   </form>
 </div>

@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProdutosComponent } from './pages/produtos/produtos.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistrarComponent } from './pages/registrar/registrar.component';
+import { HttpClientModule } from '@angular/common/http'; // Importar HttpClientModule
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RegistrarComponent } from './pages/registrar/registrar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, // Certifique-se de que está aqui
+    FormsModule,  // Certifique-se de que está aqui
+    HttpClientModule // Importando o módulo HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

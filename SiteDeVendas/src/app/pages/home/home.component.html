@@ -7,9 +7,12 @@
 
         <p>{{item.nome}}</p>
         <p class="valor">R$ {{item.preco}}</p>
+        <!-- PARCELADO -->
+        <p>ou 6x de <strong>R${{ item.preco / 6 | number: '1.2-2' }}</strong> sem juros</p>
+
 
         <!-- Exibe a mensagem de promoção se for verdadeira -->
-        <p class="promocao" *ngIf="item.promocao">Promoção de 20%</p>
+        <p class="promocao" *ngIf="item.promocao">{{item.promocao}}% OFF</p>
 
         <a [routerLink]="['/produtos', item.id]" class="btn btn-primary">ver item</a>
 

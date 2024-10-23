@@ -16,11 +16,11 @@ export class ProdutosService {
       {
         id: '001',
         marca: 'nike',
-        nome: 'Tênis Nike Freak 5 Masculino',
+        nome: 'Tênis Qix Golden Branco Preto',
         disponibilidade: 'imediato',
         descricao: 'camisa de algodão',
-        precoOriginal: 50,
-        preco: 50.00,
+        precoOriginal: 449.99,
+        preco: 449.99,
         quantidade: 10,
         promocao: false,
         images: [ // Mudança de "image" para "images" para ser consistente
@@ -38,11 +38,11 @@ export class ProdutosService {
       {
         id: '002',
         marca: 'nike',
-        nome: 'Tênis Nike Freak 5 Masculino',
+        nome: 'Tênis Hocks Bold Petitpoa',
         disponibilidade: '2 dias',
         descricao: 'camisa de algodão2',
-        precoOriginal: 60, // Adicionei precoOriginal para manter consistência
-        preco: 60.00,
+        precoOriginal: 440.90, // Adicionei precoOriginal para manter consistência
+        preco: 440.90,
         quantidade: 20,
         promocao: false,
         images: [ // Mudança de "image" para "images"
@@ -59,13 +59,13 @@ export class ProdutosService {
       {
         id: '003',
         marca: 'nike',
-        nome: 'Tênis Nike Freak 5 Masculino',
+        nome: 'Tênis Hocks Do Vale SS X-Tech Branco',
         disponibilidade: 'Encomenda',
         descricao: 'camisa de algodão3',
-        precoOriginal: 70, // Adicionei precoOriginal para manter consistência
-        preco: 70.00,
+        precoOriginal: 359.99, // Adicionei precoOriginal para manter consistência
+        preco: 359.99,
         quantidade: 30,
-        promocao: true,
+        promocao: 20,
         images: [ // Mudança de "image" para "images"
           'https://images.tcdn.com.br/img/img_prod/775752/tenis_hocks_do_vale_ss_x_tech_branco_6500_1_9538716ae758cd8d7effebdba18f55c3.jpg',
           'https://images.tcdn.com.br/img/img_prod/775752/90_tenis_hocks_do_vale_ss_x_tech_branco_6500_2_3e977ee7697a262c15470d329c13523f.jpg',
@@ -80,11 +80,11 @@ export class ProdutosService {
       {
         id: '004',
         marca: 'nike',
-        nome: 'Tênis Nike Freak 5 Masculino',
+        nome: 'Tênis Qix Combat Suede Preto Branco',
         disponibilidade: 'Retirada na loja',
         descricao: 'camisa de algodão4',
-        precoOriginal: 80, // Adicionei precoOriginal para manter consistência
-        preco: 80.00,
+        precoOriginal: 359.99, // Adicionei precoOriginal para manter consistência
+        preco: 359.99,
         quantidade: 40,
         promocao: false,
         images: [ // Mudança de "image" para "images"
